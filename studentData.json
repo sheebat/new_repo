@@ -1,0 +1,24 @@
+{
+  "records": [
+    {
+      "Name": "Sheeba Thukral",
+      "City": "San Ramon",
+      "Email": "abc@abc.com"
+    },
+    {
+      "Name": "Leela P",
+      "City": "Pleasanton",
+      "Email": "abc@abc.com"
+    },
+    {
+      "Name": "Bhavani B",
+      "City": "San Ramon",
+      "Email": "abc@abc.com"
+    },
+    {
+      "Name": "Sashi Koda",
+      "City": "Dublin",
+      "Email": "abc@abc.com"
+    }
+  ]
+}
