@@ -1,0 +1,24 @@
+{
+  "records": [
+    {
+      "Name": "Shilpi T",
+      "Course": "HTML/CSS",
+      "Email": "abc@abc.com"
+    },
+    {
+      "Name": "Kumar Sampath",
+      "Course": "Javascript",
+      "Email": "abc@abc.com"
+    },
+    {
+      "Name": "Bilhari B",
+      "Course": "REACT JS",
+      "Email": "abc@abc.com"
+    },
+    {
+      "Name": "Madhuri Koda",
+      "Course": "NODE JS",
+      "Email": "abc@abc.com"
+    }
+  ]
+}

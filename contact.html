@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-Hello from Contact Controller
+<body ng-app="myApp" ng-controller="contactController">
+
+<h2>Student List</h2>
+
+<form ng-submit="studentAdd()">
+    <input type="text" ng-model="studentInput" size="50" placeholder="Add New">
+    <input type="submit" value="Add New">
+</form>
+
+<br>
+
+<div ng-repeat="x in studentList">
+    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.studentText"></span>
+</div>
+
+<p><br><button ng-click="remove()">Delete Selected</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('contactController', function($scope) {
+        $scope.studentList = [{studentText:'Mary Ann', done:false}];
+
+        $scope.studentAdd = function() {
+            $scope.studentList.push({studentText:$scope.studentInput, done:false});
+            $scope.studentInput = "";
+        };
+
+        $scope.remove = function() {
+            var oldstudentList = $scope.studentList;
+            $scope.studentList = [];
+            angular.forEach(oldstudentList, function(x) {
+                if (!x.done) $scope.studentList.push(x);
+            });
+        };
+    });
+</script>
 </body>
 </html>

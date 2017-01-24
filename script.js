@@ -34,3 +34,27 @@ app.controller('studentController', function($scope, $http) {
         $scope.myData = response.data.records;
     });
 });
+
+
+app.controller('contactController', function($scope) {
+    $scope.studentList = [{studentText:'Mary Ann', done:false}];
+
+    $scope.studentAdd = function() {
+        $scope.studentList.push({studentText:$scope.studentInput, done:false});
+        $scope.studentInput = "";
+    };
+
+    $scope.remove = function() {
+        var oldstudentList = $scope.studentList;
+        $scope.studentList = [];
+        angular.forEach(oldstudentList, function(x) {
+            if (!x.done) $scope.studentList.push(x);
+        });
+    };
+});
+
+app.controller('myController', function($scope, $http) {
+    $http.get("\ teachersData.json").then(function (response) {
+        $scope.myData = response.data.records;
+    });
+});
